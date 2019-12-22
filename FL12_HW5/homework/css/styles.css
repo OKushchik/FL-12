@@ -1,0 +1,346 @@
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #9d27b0;
+}
+.post-2 {
+	background: #9bb800;
+}
+.post-3 {
+	background: #ed5120;
+}
+.post-4 {
+	background: #9d27b0;
+}
+.post-5 {
+	background: #2d95bb;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #0b192f;
+    width: 100%;
+    overflow: scroll;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #162b4d;
+    margin-bottom: 25px;
+}
+.logo h1 {
+    color: white;
+    font-weight: lighter;
+    padding: 35px 20px;
+}
+.logo span {
+    color: #d12767;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 40px;
+}
+.menu a {
+    text-decoration: none;
+    padding: 50px 25px;
+    color: white;
+}
+.menu a:hover {
+    background: #283d5f;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mainHeader {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: url("../img/post0.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    font-weight: lighter;
+}
+.mainHeader h2{
+    font-weight: lighter;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+.mainHeader p{
+    width: 73%;
+}
+.mainContent {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.rowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.contentImg {
+    width: 50%;
+    height: auto;
+}
+.contentImg img {
+    width: 100%;
+    height: 100%;
+}
+.contentBlock {
+    position: relative;
+    width: 50%;
+    height: auto;
+    color: white;
+}
+.contentBlock-left p, .contentBlock-right p {
+    padding: 0 20px 50px 20px;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+.contentBlock-right p {
+    text-align: right;
+}
+.contentBlock-left h2 {
+    padding: 40px 100px 20px 20px;
+    font-weight: lighter;
+    font-size: 4vw;
+    line-height: 3.5vw;
+}
+.contentBlock-right h2 {
+    padding: 40px 20px 20px 100px;
+    font-weight: lighter;
+    font-size: 4vw;
+    line-height: 3.5vw;
+    text-align: right;
+}
+.lastBlock {
+    width: 100%;
+    height: auto;
+}
+.lastBlock h2 {
+    padding: 40px 150px 20px 50px;
+    font-weight: lighter;
+    font-size: 60px;
+    line-height: 60px;
+}
+.lastBlock p {
+    padding: 0 150px 50px 50px;
+    font-weight: lighter;
+    line-height: 25px;
+}
+.date-right {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 23px;
+    font-weight: lighter;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 25px;
+}
+.date-right span {
+    font-size: 60px;
+}
+.date-left {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    font-size: 23px;
+    font-weight: lighter;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 25px;
+}
+.date-left span {
+    font-size: 60px;
+}
+aside {
+    width: 23%;
+    height: 100%;
+
+}
+
+.news {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-bottom: 25px;
+    font-weight: lighter;
+}
+.news img {
+    width: 100%;
+    height: 100%;
+}
+.news h2 {
+    padding: 25px 40px 15px 30px;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: normal;
+}
+.news p {
+    padding: 0 30px 30px 30px;
+    line-height: 1.8vw;
+    font-size: 1.8vw;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #162b4d;
+    padding: 40px 35px;
+    color: #ffffff;
+    opacity: 0.4;
+    line-height: 20px;
+}
+.contentImg img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.contentBlock:hover h2 {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.contentBlock:hover p {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.date-Block {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .burger span {
+        display: flex;
+        margin: 6px;
+        width: 30px;
+        height: 2px;
+        background: white;
+    }
+    .burger {
+        margin: 15px auto 0 auto;
+
+    }
+    .menu {
+        display: none;
+    }
+    header {
+        flex-flow: column-reverse;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .logo h1 {
+        padding-top: 15px;
+    }
+    .mainContent, .rowReverse {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contentImg, .contentBlock{
+        width: 100%;
+    }
+    .contentBlock-left p, .contentBlock-right p, .lastBlock p {
+        font-weight: lighter;
+        line-height: 25px;
+        font-size: 25px;
+        padding: 0 20px 10px 50px;
+        text-align: left;
+    }
+    .contentBlock-left h2, .contentBlock-right h2, .lastBlock h2  {
+        padding: 40px 150px 20px 50px;
+        font-weight: lighter;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .content {
+        width: 100%;
+    }
+    .mainContent {
+        width: 70%;
+    }
+    .date-right, .date-left {
+        display: none;
+    }
+    .date-Block {
+        display: block;
+        font-size: 23px;
+        font-weight: lighter;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 10px;
+    }
+    .date-Block span {
+        font-size: 35px;
+    }
+    .contentBlock-right h2 {
+        padding: 20px 20px 20px 50px;
+        text-align: left;
+    }
+    aside {
+        width: 25%;
+    }
+    .news {
+        margin-bottom: 0;
+    }
+    footer {
+        display: block;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .menu {
+        display: none;
+    }
+    main, .content  {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainContent {
+        width: 100%;
+    }
+    .contentImg, .contentBlock {
+        width: 100%;
+    }
+    .contentBlock-left h2, .contentBlock-right h2, .lastBlock h2{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .contentBlock-left p, .contentBlock-right p, .lastBlock p {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    aside {
+        width: 100%;
+        margin-left: 0;
+    }
+    .news h2 {
+        padding: 25px 40px 15px 30px;
+        text-align: left;
+        font-size: 28px;
+        font-weight: normal;
+    }
+    .news p {
+        padding: 0 30px 30px 30px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+}
