@@ -12,13 +12,9 @@ function convert (...args){
 convert('1', 2, 3, '4'); // [1, '2', '3', 4]
 /////Task 2
 function executeforEach(arr,callback){
-    let newArr;
     for (let i=0; i < arr.length; i++){
-        newArr = [];
-        let newArrEl = callback(arr[i]);
-        newArr.push(newArrEl);
+        callback(arr[i]);
     }
-    console.log(newArr);
 }
 executeforEach([1,2,3], function(el) {
  console.log(el * 2) 
@@ -30,7 +26,11 @@ function mapArray (arr,callback) {
             arr[i] = +arr[i]
         }
     }
-    let roots = arr.map(callback);
+    let roots = [];
+    for (let j=0; j < arr.length; j++){
+        let root = callback(arr[j]);
+        roots.push(root);
+    }
     console.log(roots);
 }
 mapArray([2, '5', 8], function(el) {
@@ -38,7 +38,13 @@ mapArray([2, '5', 8], function(el) {
 }); // returns [5, 8, 11]
 /////Task 4
 function filterArray (arr,callback){
-    let roots = arr.filter(callback);
+    let roots = [];
+    for (let i=0; i < arr.length; i++) {
+        if (callback(arr[i])){
+            let root = arr[i];
+            roots.push(root);
+        }
+    }
     console.log(roots);
 }
 filterArray([2, 5, 8], function(el) {
@@ -47,9 +53,12 @@ filterArray([2, 5, 8], function(el) {
 /////Task 5
 function flipOver (str){
     let arr = str.split('');
-    let strReverse = arr.reverse();
-    strReverse = strReverse.join('');
-    console.log(strReverse);
+    let arrRev = [];
+    for(let i=arr.length-1; 0 <= i; i--){
+        arrRev.push(arr[i])
+    }
+    arrRev = arrRev.join('');
+    console.log(arrRev);
 }
 flipOver('hey world'); // 'dlrow yeh'
 /////Task 6
@@ -78,14 +87,14 @@ function getArrayOfKeys() {
 getArrayOfKeys(actors, name); // [‘tommy’, ‘lee’]
 /////Task 8
 function substitute (arr) {
-    let roots = arr.map(function(el) {
- if (el<30) {
-         el = '*';
-        return el;
-    } else {
-        return el;
+    let roots = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 30) {
+            roots[i] = '*';
+        } else {
+            roots[i]=arr[i];
+        }
     }
-    });
     console.log(roots);
 }
 substitute([58, 14, 48, 2, 31, 29]); // [58, '*', 48, '*', 31, '*']
