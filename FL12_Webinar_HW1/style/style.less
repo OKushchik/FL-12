@@ -1,0 +1,127 @@
+
+@color-blue:#2A74BF;
+@color-red: #D7514C;
+@color-green:#4D944B;
+@color-orange:#D8C11D;
+@color-grey:#666;
+
+header {
+  width: 100%;
+}
+hr {
+  border-top: 2px solid @color-blue;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+.navbar-light .navbar-nav .active>.nav-link {
+  color: white;
+}
+.active {
+   background: @color-blue;
+ }
+.content {
+  &__title {
+    color: @color-blue;
+  }
+  &__item:nth-child(2) {
+    padding-left: 20px ;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__titleDescription {
+    font-size: 24px;
+    color: @color-blue;
+  }
+  &__description {
+    font-size: 18px;
+  }
+  &__descriptionList {
+    font-size: 18px;
+  }
+}
+.content {
+  &__grid {
+    display: grid ;
+    grid-template-columns: [first] 60% [second] auto;
+    grid-template-rows: [row1-start] auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+.related {
+  &__title{
+    color: @color-blue;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+.card {
+  &:nth-child(1){
+    background-color: @color-red;
+    padding: 5px;
+  }
+  &:nth-child(2){
+    background-color: @color-blue;
+    padding: 5px;
+  }
+  &:nth-child(3){
+    background-color: @color-orange;
+    padding: 5px;
+  }
+  &:nth-child(4){
+    background-color: @color-green;
+    padding: 5px;
+  }
+  border: 5px solid white;
+  border-radius: 0;
+  padding: 0;
+}
+
+.card-body {
+  padding: 0;
+}
+.card-footer {
+  border-top: none;
+}
+.text-center {
+    margin-bottom: 0;
+}
+.modal-footer {
+  background: @color-grey;
+  justify-content: flex-start;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .content {
+    &__grid {
+      display: grid ;
+      grid-template-columns: [first] 100%;
+      grid-template-rows: [row1-start] auto;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 991.99px) and (max-width: 1199.98px)  {
+  .content {
+    &__titleDescription {
+      font-size: 20px;
+    }
+    &__description {
+      font-size: 14px;
+    }
+    &__descriptionList {
+      font-size: 14px;
+    }
+  }
+}
+
