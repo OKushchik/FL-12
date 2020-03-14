@@ -1,0 +1,21 @@
+.cont {
+  display: flex;
+  margin-top: 10px;
+  border:1px solid grey;
+  border-radius:10px
+}
+.ulList {
+  width: 80%;
+  margin: 0 auto;
+}
+.ulList ul{
+  list-style: none;
+}
+.ulList li {
+  display: flex;
+  width: 80%;
+  padding: 1% 5%;
+}
+.liData {
+  width: 100px
+}
