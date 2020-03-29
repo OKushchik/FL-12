@@ -1,0 +1,35 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background: url('img/texture.jpg') no-repeat;
+}
+
+section {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 390px;
+    margin: 50px auto;
+}
+
+.cell {
+    font-family: "Open Sans", bold;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 0 1px #333;
+    border: 1px solid #333;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 4px;
+    cursor: pointer;
+    line-height: 120px;
+    font-size: 80px;
+}
+
+.game-restart {
+    padding: 15px 25px;
+    border-radius: 5px;
+}
